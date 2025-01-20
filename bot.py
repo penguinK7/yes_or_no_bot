@@ -24,7 +24,7 @@ def get_gif_response():
     """Получение ответа и GIF из API."""
     try:
         response = requests.get(URL)
-        response.raise_for_status()  # Проверка на успешность запроса
+        response.raise_for_status()
         data = response.json()
         return data.get('answer'), data.get('image')
     except requests.RequestException as error:
